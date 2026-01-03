@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Main Content -->
+    <div class="container">
+        <div class="page-header">
+            <h1>Image Gallery</h1>
+            <p>CLEARLY CATCH FOR THEM</p>
+        </div>
+
+        <div class="content-wrapper">
+            <!-- Filters Sidebar -->
+            <aside class="filters-sidebar">
+                <h3>Filters</h3>
+                <div class="filters-list">
+                    <button class="filter-btn active" onclick="filterImages('all', this)">
+                        All
+                    </button>
+                    <button class="filter-btn" onclick="filterImages('nature', this)">
+                        Nature
+                    </button>
+                    <button class="filter-btn" onclick="filterImages('city', this)">
+                        City
+                    </button>
+                    <button class="filter-btn" onclick="filterImages('people', this)">
+                        People
+                    </button>
+                    <button class="filter-btn" onclick="filterImages('animals', this)">
+                        Animals
+                    </button>
+                </div>
+
+            </aside>
+
+            <!-- Gallery (Your original gallery - unchanged) -->
+            <main class="gallery">
+                <img src="images/makkah.jpg" class="img city" onclick="openLightbox(0)">
+                <img src="images/fern-10014894_1280.jpg" class="img nature" onclick="openLightbox(1)">
+                <img src="images/oak-9661039_1280.jpg" class="img nature" onclick="openLightbox(2)">
+                <img src="images/pexels-48393-356269.jpg" class="img nature" onclick="openLightbox(3)">
+                <img src="images/building-7394332_1280.jpg" class="img city" onclick="openLightbox(4)">
+                <img src="images/house-6597406_1280.jpg" class="img nature" onclick="openLightbox(5)">
+                <img src="images/caption.jpg" class="img people" onclick="openLightbox(6)">
+                <img src="images/pexels-310265822-34652802.jpg" class="img nature" onclick="openLightbox(7)">
+                <img src="images/pexels-ahnafortho-35141456.jpg" class="img nature" onclick="openLightbox(8)">
+                <img src="images/pexels-alessio-cesario-975080-1906879.jpg" class="img people"
+                    onclick="openLightbox(9)">
+                <img src="images/pexels-apasaric-2070047.jpg" class="img city" onclick="openLightbox(10)">
+                <img src="images/pexels-apasaric-2385210.jpg" class="img city" onclick="openLightbox(11)">
+                <img src="images/pexels-bagus41-1440476.jpg" class="img nature" onclick="openLightbox(12)">
+                <img src="images/pexels-belle-co-99483-402028.jpg" class="img city" onclick="openLightbox(13)">
+                <img src="images/pexels-catscoming-674580.jpg" class="img animals" onclick="openLightbox(14)">
+                <img src="images/pexels-ethan-brooke-1123775-2122406.jpg" class="img city" onclick="openLightbox(15)">
+                <img src="images/pexels-jiri-ikonomidis-164966727-31894060.jpg" class="img nature"
+                    onclick="openLightbox(16)">
+                <img src="images/pexels-miami302-24498500.jpg" class="img people" onclick="openLightbox(17)">
+                <img src="images/pexels-peng-louis-587527-1653357.jpg" class="img animals" onclick="openLightbox(18)">
+                <img src="images/pexels-pixabay-45170.jpg" class="img animals" onclick="openLightbox(19)">
+                <img src="images/pexels-pixabay-219692.jpg" class="img city" onclick="openLightbox(20)">
+                <img src="images/pexels-pixabay-237211.jpg" class="img city" onclick="openLightbox(21)">
+                <img src="images/pexels-pixabay-248350.jpg" class="img animals" onclick="openLightbox(22)">
+                <img src="images/pexels-pixabay-301614.jpg" class="img nature" onclick="openLightbox(23)">
+                <img src="images/pexels-rushow-122107.jpg" class="img nature" onclick="openLightbox(24)">
+                <img src="images/pexels-sadman-1474821.jpg" class="img animals" onclick="openLightbox(25)">
+                <img src="images/pexels-septimiu-lupea-208604-669015.jpg" class="img animals"
+                    onclick="openLightbox(26)">
+                <img src="images/pexels-tanhatamannasyed-35458090.jpg" class="img nature" onclick="openLightbox(27)">
+                <img src="images/pexels-tirachard-kumtanom-112571-601174.jpg" class="img nature"
+                    onclick="openLightbox(28)">
+                <img src="images/pexels-tomas-malik-793526-3408354.jpg" class="img nature" onclick="openLightbox(29)">
+                <img src="images/pexels-yessitrex-34922354.jpg" class="img people" onclick="openLightbox(30)">
+                <img src="images/pexels-zakaria-joy-2157235168-34711317.jpg" class="img nature"
+                    onclick="openLightbox(31)">
+            </main>
+        </div>
+    </div>
+
+    <!-- Lightbox (Your original lightbox - unchanged) -->
+    <div id="lightbox">
+        <span class="close" onclick="closeLightbox()">×</span>
+        <button class="prev" onclick="changeImage(-1)">❮</button>
+        <img id="lightbox-img">
+        <button class="next" onclick="changeImage(1)">❯</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
